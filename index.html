@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartTools - Free Online Tools</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* HEADER */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    background: white;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* SEARCH */
+
+.search-box {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.search-box input {
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* TOOLS */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.tool-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.tool-card h2 {
+    margin-bottom: 18px;
+}
+
+.tool-card input,
+.tool-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.tool-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.tool-card button:hover {
+    background: #374151;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        SmartTools
+    </div>
+
+    <nav>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Free Online Tools</h1>
+
+    <p>
+        Simple, fast and useful tools for everyday needs.
+    </p>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search a tool..."
+        onkeyup="searchTools()"
+    >
+
+</div>
+
+
+<!-- TOOLS -->
+
+<div class="container" id="tools">
+
+    <h2 class="section-title">
+        All Tools
+    </h2>
+
+
+    <div class="tool-grid">
+
+
+        <!-- PERCENTAGE -->
+
+        <div class="tool-card">
+
+            <h2>📊 Percentage Calculator</h2>
+
+            <input
+                type="number"
+                id="percentNumber"
+                placeholder="Enter number"
+            >
+
+            <input
+                type="number"
+                id="percentValue"
+                placeholder="Enter percentage"
+            >
+
+            <button onclick="percentageCalculator()">
+                Calculate
+            </button>
+
+            <div
+                class="result"
+                id="percentageResult">
+            </div>
+
+        </div>
+
+
+        <!-- AGE -->
+
+        <div class="tool-card">
+
+            <h2>🎂 Age Calculator</h2>
+
+            <input
+                type="date"
+                id="birthDate"
+            >
+
+            <button onclick="ageCalculator()">
+                Calculate Age
+            </button>
+
+            <div
+                class="result"
+                id="ageResult">
+            </div>
+
+        </div>
+
+
+        <!-- BMI -->
+
+        <div class="tool-card">
+
+            <h2>⚖️ BMI Calculator</h2>
+
+            <input
+                type="number"
+                id="weight"
+                placeholder="Weight in kg"
+            >
+
+            <input
+                type="number"
+                id="height"
+                placeholder="Height in cm"
+            >
+
+            <button onclick="bmiCalculator()">
+                Calculate BMI
+            </button>
+
+            <div
+                class="result"
+                id="bmiResult">
+            </div>
+
+        </div>
+
+
+        <!-- DISCOUNT -->
+
+        <div class="tool-card">
+
+            <h2>🏷️ Discount Calculator</h2>
+
+            <input
+                type="number"
+                id="originalPrice"
+                placeholder="Original price"
+            >
+
+            <input
+                type="number"
+                id="discountPercent"
+                placeholder="Discount %"
+            >
+
+            <button onclick="discountCalculator()">
+                Calculate
+            </button>
+
+            <div
+                class="result"
+                id="discountResult">
+            </div>
+
+        </div>
+
+
+        <!-- GST -->
+
+        <div class="tool-card">
+
+            <h2>💰 GST Calculator</h2>
+
+            <input
+                type="number"
+                id="gstAmount"
+                placeholder="Enter amount"
+            >
+
+            <input
+                type="number"
+                id="gstPercent"
+                placeholder="GST %"
+            >
+
+            <button onclick="gstCalculator()">
+                Calculate
+            </button>
+
+            <div
+                class="result"
+                id="gstResult">
+            </div>
+
+        </div>
+
+
+        <!-- WORD COUNTER -->
+
+        <div class="tool-card">
+
+            <h2>📝 Word Counter</h2>
+
+            <textarea
+                id="wordText"
+                rows="6"
+                placeholder="Type or paste your text..."
+                oninput="wordCounter()"
+            ></textarea>
+
+            <div
+                class="result"
+                id="wordResult">
+                Words: 0 | Characters: 0
+            </div>
+
+        </div>
+
+
+        <!-- SIMPLE INTEREST -->
+
+        <div class="tool-card">
+
+            <h2>💵 Simple Interest</h2>
+
+            <input
+                type="number"
+                id="principal"
+                placeholder="Principal amount"
+            >
+
+            <input
+                type="number"
+                id="interestRate"
+                placeholder="Interest rate %"
+            >
+
+            <input
+                type="number"
+                id="interestTime"
+                placeholder="Time in years"
+            >
+
+            <button onclick="simpleInterest()">
+                Calculate
+            </button>
+
+            <div
+                class="result"
+                id="interestResult">
+            </div>
+
+        </div>
+
+
+        <!-- DISCOUNT -->
+
+        <div class="tool-card">
+
+            <h2>🛒 Final Price Calculator</h2>
+
+            <input
+                type="number"
+                id="shopPrice"
+                placeholder="Product price"
+            >
+
+            <input
+                type="number"
+                id="shopDiscount"
+                placeholder="Discount %"
+            >
+
+            <button onclick="finalPrice()">
+                Calculate Final Price
+            </button>
+
+            <div
+                class="result"
+                id="finalPriceResult">
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>About SmartTools</h2>
+
+    <br>
+
+    <p>
+        SmartTools is a simple online platform that provides
+        useful calculators and everyday digital tools.
+        Our goal is to make common calculations quick,
+        simple and accessible.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 SmartTools. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* PERCENTAGE */
+
+function percentageCalculator() {
+
+    let number =
+        parseFloat(
+            document.getElementById("percentNumber").value
+        );
+
+    let percentage =
+        parseFloat(
+            document.getElementById("percentValue").value
+        );
+
+    if (isNaN(number) || isNaN(percentage)) {
+
+        document.getElementById("percentageResult").innerText =
+            "Please enter both values.";
+
+        return;
+    }
+
+    let result =
+        (number * percentage) / 100;
+
+    document.getElementById("percentageResult").innerText =
+        "Result: " + result;
+
+}
+
+
+
+/* AGE */
+
+function ageCalculator() {
+
+    let input =
+        document.getElementById("birthDate").value;
+
+    if (!input) {
+
+        document.getElementById("ageResult").innerText =
+            "Please select your birth date.";
+
+        return;
+    }
+
+    let birth =
+        new Date(input);
+
+    let today =
+        new Date();
+
+    let years =
+        today.getFullYear() -
+        birth.getFullYear();
+
+    let months =
+        today.getMonth() -
+        birth.getMonth();
+
+    if (
+        months < 0 ||
+        (
+            months === 0 &&
+            today.getDate() < birth.getDate()
+        )
+    ) {
+        years--;
+    }
+
+    document.getElementById("ageResult").innerText =
+        "Your age: " + years + " years";
+
+}
+
+
+
+/* BMI */
+
+function bmiCalculator() {
+
+    let weight =
+        parseFloat(
+            document.getElementById("weight").value
+        );
+
+    let height =
+        parseFloat(
+            document.getElementById("height").value
+        );
+
+    if (
+        isNaN(weight) ||
+        isNaN(height) ||
+        height <= 0
+    ) {
+
+        document.getElementById("bmiResult").innerText =
+            "Please enter valid values.";
+
+        return;
+    }
+
+    let heightMeter =
+        height / 100;
+
+    let bmi =
+        weight /
+        (heightMeter * heightMeter);
+
+    document.getElementById("bmiResult").innerText =
+        "Your BMI: " + bmi.toFixed(2);
+
+}
+
+
+
+/* DISCOUNT */
+
+function discountCalculator() {
+
+    let price =
+        parseFloat(
+            document.getElementById("originalPrice").value
+        );
+
+    let discount =
+        parseFloat(
+            document.getElementById("discountPercent").value
+        );
+
+    if (
+        isNaN(price) ||
+        isNaN(discount)
+    ) {
+
+        document.getElementById("discountResult").innerText =
+            "Please enter both values.";
+
+        return;
+    }
+
+    let saved =
+        (price * discount) / 100;
+
+    let final =
+        price - saved;
+
+    document.getElementById("discountResult").innerText =
+        "You save: ₹" +
+        saved.toFixed(2) +
+        " | Final price: ₹" +
+        final.toFixed(2);
+
+}
+
+
+
+/* GST */
+
+function gstCalculator() {
+
+    let amount =
+        parseFloat(
+            document.getElementById("gstAmount").value
+        );
+
+    let rate =
+        parseFloat(
+            document.getElementById("gstPercent").value
+        );
+
+    if (
+        isNaN(amount) ||
+        isNaN(rate)
+    ) {
+
+        document.getElementById("gstResult").innerText =
+            "Please enter both values.";
+
+        return;
+    }
+
+    let gst =
+        (amount * rate) / 100;
+
+    let total =
+        amount + gst;
+
+    document.getElementById("gstResult").innerText =
+        "GST: ₹" +
+        gst.toFixed(2) +
+        " | Total: ₹" +
+        total.toFixed(2);
+
+}
+
+
+
+/* WORD COUNTER */
+
+function wordCounter() {
+
+    let text =
+        document.getElementById("wordText").value;
+
+    let characters =
+        text.length;
+
+    let words =
+        text.trim() === ""
+        ? 0
+        : text.trim().split(/\s+/).length;
+
+    document.getElementById("wordResult").innerText =
+        "Words: " +
+        words +
+        " | Characters: " +
+        characters;
+
+}
+
+
+
+/* SIMPLE INTEREST */
+
+function simpleInterest() {
+
+    let principal =
+        parseFloat(
+            document.getElementById("principal").value
+        );
+
+    let rate =
+        parseFloat(
+            document.getElementById("interestRate").value
+        );
+
+    let time =
+        parseFloat(
+            document.getElementById("interestTime").value
+        );
+
+    if (
+        isNaN(principal) ||
+        isNaN(rate) ||
+        isNaN(time)
+    ) {
+
+        document.getElementById("interestResult").innerText =
+            "Please enter all values.";
+
+        return;
+    }
+
+    let interest =
+        (principal * rate * time) / 100;
+
+    let total =
+        principal + interest;
+
+    document.getElementById("interestResult").innerText =
+        "Interest: ₹" +
+        interest.toFixed(2) +
+        " | Total: ₹" +
+        total.toFixed(2);
+
+}
+
+
+
+/* FINAL PRICE */
+
+function finalPrice() {
+
+    let price =
+        parseFloat(
+            document.getElementById("shopPrice").value
+        );
+
+    let discount =
+        parseFloat(
+            document.getElementById("shopDiscount").value
+        );
+
+    if (
+        isNaN(price) ||
+        isNaN(discount)
+    ) {
+
+        document.getElementById("finalPriceResult").innerText =
+            "Please enter both values.";
+
+        return;
+    }
+
+    let discountAmount =
+        (price * discount) / 100;
+
+    let final =
+        price - discountAmount;
+
+    document.getElementById("finalPriceResult").innerText =
+        "Final Price: ₹" +
+        final.toFixed(2);
+
+}
+
+
+
+/* SEARCH */
+
+function searchTools() {
+
+    let search =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".tool-card");
+
+    cards.forEach(function(card) {
+
+        let title =
+            card
+            .querySelector("h2")
+            .innerText
+            .toLowerCase();
+
+        if (title.includes(search)) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+</html>
