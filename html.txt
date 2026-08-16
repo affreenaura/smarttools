@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AIHub | Discover the Best AI Tools</title>
+
+<meta name="description"
+content="Discover the best AI tools for writing, image generation, video, coding, design, marketing and productivity.">
+
+<meta name="keywords"
+content="AI tools, best AI tools, free AI tools, AI websites, AI writing tools, AI image generators, AI video tools, AI coding tools, AI design tools">
+
+<meta name="author"
+content="AIHub">
+
+<meta name="robots"
+content="index, follow">
+
+<meta name="theme-color"
+content="#6c4df6">
+
+<meta property="og:title"
+content="AIHub | Discover the Best AI Tools">
+
+<meta property="og:description"
+content="Explore powerful AI tools for writing, design, coding, video, marketing and productivity.">
+
+<meta property="og:type"
+content="website">
+
+
+<style>
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7f8fc;
+    color: #171923;
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    height: 72px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid #e7e8ef;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+
+    color: #6c4df6;
+}
+
+.logo span {
+    color: #171923;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #555866;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #6c4df6;
+}
+
+.theme-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f0edff;
+
+    color: #6c4df6;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 580px;
+
+    padding:
+        105px 7% 80px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #e8e0ff 0,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            #dceaff 0,
+            transparent 28%
+        ),
+
+        #f7f8fc;
+}
+
+.badge {
+    display: inline-block;
+
+    background: #ece8ff;
+
+    color: #6046df;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size:
+        clamp(42px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+}
+
+.gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            #6c4df6,
+            #9b5cff,
+            #2979ff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #686b78;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding:
+        19px 60px 19px 22px;
+
+    border:
+        1px solid #dddfea;
+
+    border-radius: 16px;
+
+    background: white;
+
+    outline: none;
+
+    box-shadow:
+        0 12px 35px
+        rgba(40,30,100,0.08);
+}
+
+.search-box input:focus {
+    border-color: #765bf5;
+}
+
+.search-icon {
+    position: absolute;
+
+    right: 20px;
+    top: 17px;
+
+    font-size: 22px;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+}
+
+.section-title p {
+    color: #777b88;
+
+    margin-top: 8px;
+}
+
+
+/* ================================
+   CATEGORIES
+================================ */
+
+.categories {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        65px 7% 20px;
+}
+
+.category-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.category-btn {
+    border:
+        1px solid #dddfea;
+
+    background: white;
+
+    padding:
+        11px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    color: #555866;
+
+    transition: 0.2s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #6c4df6;
+
+    color: white;
+
+    border-color: #6c4df6;
+}
+
+
+/* ================================
+   TOOLS
+================================ */
+
+.tools-section {
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        40px 7% 100px;
+}
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.tool-card {
+    background: white;
+
+    border:
+        1px solid #e5e6ee;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: 0.25s;
+}
+
+.tool-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(30,30,80,0.10);
+}
+
+.tool-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f0edff;
+
+    font-size: 27px;
+
+    margin-bottom: 18px;
+}
+
+.tool-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 9px;
+}
+
+.tool-card p {
+    color: #737684;
+
+    font-size: 14px;
+
+    min-height: 67px;
+}
+
+.tool-meta {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.category-label {
+    font-size: 12px;
+
+    background: #f1f2f6;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    color: #666977;
+}
+
+.rating {
+    color: #f59e0b;
+
+    font-size: 13px;
+}
+
+.tool-actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.visit-btn,
+.details-btn {
+    flex: 1;
+
+    border: none;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.visit-btn {
+    background: #6c4df6;
+
+    color: white;
+}
+
+.details-btn {
+    background: #f0edff;
+
+    color: #6248e5;
+}
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #777;
+}
+
+
+/* ================================
+   STATS
+================================ */
+
+.stats {
+    background: #171923;
+
+    color: white;
+
+    padding: 70px 7%;
+}
+
+.stats-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+.stat h3 {
+    font-size: 42px;
+}
+
+.stat p {
+    color: #aaa;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+.cta-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee9ff,
+            #e7f0ff
+        );
+}
+
+.cta h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #656875;
+
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    border: none;
+
+    padding: 14px 25px;
+
+    background: #6c4df6;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.55);
+
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+
+    max-width: 520px;
+
+    width: 100%;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #666;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #111219;
+
+    color: white;
+
+    padding: 50px 7%;
+
+    text-align: center;
+}
+
+footer p {
+    color: #999;
+
+    margin-top: 10px;
+}
+
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark {
+    background: #0f1016;
+
+    color: #f4f4f5;
+}
+
+body.dark .navbar,
+body.dark .tool-card,
+body.dark .search-box input,
+body.dark .category-btn,
+body.dark .modal-content {
+    background: #191a23;
+
+    border-color: #2c2d39;
+}
+
+body.dark .nav-links a,
+body.dark .tool-card p,
+body.dark .section-title p,
+body.dark .hero p,
+body.dark .cta p {
+    color: #a7a9b5;
+}
+
+body.dark .logo span {
+    color: white;
+}
+
+body.dark .hero {
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #211a43 0,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            #17243f 0,
+            transparent 28%
+        ),
+
+        #0f1016;
+}
+
+body.dark .category-btn {
+    color: #ddd;
+}
+
+body.dark .category-btn.active {
+    background: #6c4df6;
+
+    color: white;
+}
+
+body.dark .category-label {
+    background: #292a35;
+}
+
+body.dark .cta-box {
+    background: #1c1d27;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:1000px) {
+
+    .tools-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media(max-width:600px) {
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================
+     NAVBAR
+================================ -->
+
+<header class="navbar">
+
+    <div class="logo">
+        AI<span>Hub</span>
+    </div>
+
+    <nav>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#tools">
+                    AI Tools
+                </a>
+            </li>
+
+            <li>
+                <a href="#categories">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <button
+        class="theme-btn"
+        onclick="toggleTheme()">
+
+        🌙
+
+    </button>
+
+</header>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<main>
+
+<section
+    class="hero"
+    id="home">
+
+    <span class="badge">
+        ✨ Explore AI Technology
+    </span>
+
+    <h1>
+
+        Discover the
+
+        <span class="gradient-text">
+            Best AI Tools
+        </span>
+
+        for Your Work
+
+    </h1>
+
+    <p>
+
+        Explore powerful AI tools for
+        writing, design, coding, video,
+        marketing, productivity and more.
+
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search AI tools..."
+            onkeyup="searchTools()">
+
+        <span class="search-icon">
+            🔍
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     CATEGORIES
+================================ -->
+
+<section
+    class="categories"
+    id="categories">
+
+    <div class="section-title">
+
+        <h2>
+            Explore Categories
+        </h2>
+
+        <p>
+            Find the right AI tool for your needs.
+        </p>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button
+            class="category-btn active"
+            onclick="filterTools('All', this)">
+
+            All
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Writing', this)">
+
+            ✍️ Writing
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Image', this)">
+
+            🎨 Image
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Video', this)">
+
+            🎬 Video
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Coding', this)">
+
+            💻 Coding
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Design', this)">
+
+            🖌️ Design
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Marketing', this)">
+
+            📈 Marketing
+
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="filterTools('Productivity', this)">
+
+            ⚡ Productivity
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     TOOLS
+================================ -->
+
+<section
+    class="tools-section"
+    id="tools">
+
+    <div class="section-title">
+
+        <h2>
+            Popular AI Tools
+        </h2>
+
+        <p>
+            Explore powerful tools for your workflow.
+        </p>
+
+    </div>
+
+
+    <div
+        class="tools-grid"
+        id="toolsGrid">
+
+
+        <!-- CHATGPT -->
+
+        <article
+            class="tool-card"
+            data-category="Writing"
+            data-name="ChatGPT">
+
+            <div class="tool-icon">
+                🤖
+            </div>
+
+            <h3>
+                ChatGPT
+            </h3>
+
+            <p>
+                AI assistant for writing,
+                brainstorming, learning,
+                coding and everyday tasks.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Writing
+                </span>
+
+                <span class="rating">
+                    ★ 4.9
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://chatgpt.com'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'ChatGPT',
+                    'An AI assistant for writing, coding, research, brainstorming and productivity.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- GEMINI -->
+
+        <article
+            class="tool-card"
+            data-category="Productivity"
+            data-name="Gemini">
+
+            <div class="tool-icon">
+                ✨
+            </div>
+
+            <h3>
+                Gemini
+            </h3>
+
+            <p>
+                Google AI assistant for research,
+                writing, reasoning and productivity.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Productivity
+                </span>
+
+                <span class="rating">
+                    ★ 4.8
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://gemini.google.com'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'Gemini',
+                    'Google AI assistant for research, writing, brainstorming and productivity.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- MIDJOURNEY -->
+
+        <article
+            class="tool-card"
+            data-category="Image"
+            data-name="Midjourney">
+
+            <div class="tool-icon">
+                🎨
+            </div>
+
+            <h3>
+                Midjourney
+            </h3>
+
+            <p>
+                Generate creative AI images
+                from natural language prompts.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Image
+                </span>
+
+                <span class="rating">
+                    ★ 4.8
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://www.midjourney.com'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'Midjourney',
+                    'Generative AI platform for creating images from text prompts.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- CANVA -->
+
+        <article
+            class="tool-card"
+            data-category="Design"
+            data-name="Canva">
+
+            <div class="tool-icon">
+                🖌️
+            </div>
+
+            <h3>
+                Canva
+            </h3>
+
+            <p>
+                Create social media designs,
+                presentations, posters and
+                marketing content with AI.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Design
+                </span>
+
+                <span class="rating">
+                    ★ 4.7
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://www.canva.com'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'Canva',
+                    'Visual design platform with AI tools for graphics, presentations and marketing content.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- RUNWAY -->
+
+        <article
+            class="tool-card"
+            data-category="Video"
+            data-name="Runway">
+
+            <div class="tool-icon">
+                🎬
+            </div>
+
+            <h3>
+                Runway
+            </h3>
+
+            <p>
+                AI-powered creative tools
+                for video generation
+                and editing.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Video
+                </span>
+
+                <span class="rating">
+                    ★ 4.7
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://runwayml.com'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'Runway',
+                    'AI creative platform for generating and editing video content.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- GITHUB COPILOT -->
+
+        <article
+            class="tool-card"
+            data-category="Coding"
+            data-name="GitHub Copilot">
+
+            <div class="tool-icon">
+                💻
+            </div>
+
+            <h3>
+                GitHub Copilot
+            </h3>
+
+            <p>
+                AI coding assistant that
+                helps developers write
+                and understand code.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Coding
+                </span>
+
+                <span class="rating">
+                    ★ 4.8
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://github.com/features/copilot'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'GitHub Copilot',
+                    'AI coding assistant that provides code suggestions and helps developers work faster.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- JASPER -->
+
+        <article
+            class="tool-card"
+            data-category="Marketing"
+            data-name="Jasper">
+
+            <div class="tool-icon">
+                📈
+            </div>
+
+            <h3>
+                Jasper
+            </h3>
+
+            <p>
+                AI platform designed for
+                marketing content and
+                brand workflows.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Marketing
+                </span>
+
+                <span class="rating">
+                    ★ 4.6
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://www.jasper.ai'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'Jasper',
+                    'AI-powered marketing platform for content and brand workflows.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ELEVENLABS -->
+
+        <article
+            class="tool-card"
+            data-category="Video"
+            data-name="ElevenLabs">
+
+            <div class="tool-icon">
+                🎙️
+            </div>
+
+            <h3>
+                ElevenLabs
+            </h3>
+
+            <p>
+                AI voice technology for
+                speech, narration and
+                audio creation.
+            </p>
+
+            <div class="tool-meta">
+
+                <span class="category-label">
+                    Video
+                </span>
+
+                <span class="rating">
+                    ★ 4.8
+                </span>
+
+            </div>
+
+            <div class="tool-actions">
+
+                <button
+                    class="visit-btn"
+                    onclick="visitTool(
+                    'https://elevenlabs.io'
+                    )">
+
+                    Visit
+
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="showDetails(
+                    'ElevenLabs',
+                    'AI voice technology for generating realistic speech and audio content.'
+                    )">
+
+                    Details
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div
+        class="no-results"
+        id="noResults">
+
+        😕 No AI tools found.
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     STATS
+================================ -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+
+            <h3>
+                500+
+            </h3>
+
+            <p>
+                AI Tools
+            </p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>
+                7+
+            </h3>
+
+            <p>
+                Categories
+            </p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>
+                10K+
+            </h3>
+
+            <p>
+                Visitor Goal
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     CTA
+================================ -->
+
+<section
+    class="cta"
+    id="about">
+
+    <div class="cta-box">
+
+        <h2>
+            Build Smarter With AI
+        </h2>
+
+        <p>
+            Discover tools that save time,
+            improve creativity and make
+            your work easier.
+        </p>
+
+        <button
+            class="cta-btn"
+            onclick="
+            document
+            .getElementById('tools')
+            .scrollIntoView()">
+
+            Explore AI Tools
+
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <div class="logo">
+        AI<span>Hub</span>
+    </div>
+
+    <p>
+        © 2026 AIHub. Discover. Create. Automate.
+    </p>
+
+</footer>
+
+
+<!-- ================================
+     MODAL
+================================ -->
+
+<div
+    class="modal"
+    id="toolModal">
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeModal()">
+
+            ×
+
+        </span>
+
+        <h2 id="modalTitle">
+            Tool Name
+        </h2>
+
+        <p id="modalDescription">
+            Tool description
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ================================
+   SEARCH
+================================ */
+
+function searchTools() {
+
+    const input =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document
+        .querySelectorAll(".tool-card");
+
+    let found = 0;
+
+    cards.forEach(card => {
+
+        const name =
+            card.dataset.name
+            .toLowerCase();
+
+        const category =
+            card.dataset.category
+            .toLowerCase();
+
+        const text =
+            card.innerText
+            .toLowerCase();
+
+        if (
+            name.includes(input) ||
+            category.includes(input) ||
+            text.includes(input)
+        ) {
+
+            card.style.display =
+                "block";
+
+            found++;
+
+        } else {
+
+            card.style.display =
+                "none";
+        }
+
+    });
+
+    document
+        .getElementById("noResults")
+        .style.display =
+        found === 0
+        ? "block"
+        : "none";
+}
+
+
+/* ================================
+   CATEGORY FILTER
+================================ */
+
+function filterTools(
+    category,
+    button
+) {
+
+    document
+        .querySelectorAll(".category-btn")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+    button.classList.add("active");
+
+    const cards =
+        document
+        .querySelectorAll(".tool-card");
+
+    let found = 0;
+
+    cards.forEach(card => {
+
+        if (
+            category === "All" ||
+            card.dataset.category === category
+        ) {
+
+            card.style.display =
+                "block";
+
+            found++;
+
+        } else {
+
+            card.style.display =
+                "none";
+        }
+
+    });
+
+    document
+        .getElementById("noResults")
+        .style.display =
+        found === 0
+        ? "block"
+        : "none";
+}
+
+
+/* ================================
+   DARK MODE
+================================ */
+
+function toggleTheme() {
+
+    document
+        .body
+        .classList
+        .toggle("dark");
+
+    const button =
+        document.querySelector(
+            ".theme-btn"
+        );
+
+    if (
+        document.body
+        .classList
+        .contains("dark")
+    ) {
+
+        button.innerHTML = "☀️";
+
+    } else {
+
+        button.innerHTML = "🌙";
+    }
+}
+
+
+/* ================================
+   VISIT TOOL
+================================ */
+
+function visitTool(url) {
+
+    window.open(
+        url,
+        "_blank"
+    );
+}
+
+
+/* ================================
+   DETAILS MODAL
+================================ */
+
+function showDetails(
+    title,
+    description
+) {
+
+    document
+        .getElementById("modalTitle")
+        .innerText = title;
+
+    document
+        .getElementById("modalDescription")
+        .innerText = description;
+
+    document
+        .getElementById("toolModal")
+        .style.display = "flex";
+}
+
+
+function closeModal() {
+
+    document
+        .getElementById("toolModal")
+        .style.display = "none";
+}
+
+
+/* ================================
+   CLOSE MODAL OUTSIDE
+================================ */
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById(
+            "toolModal"
+        );
+
+    if (
+        event.target === modal
+    ) {
+
+        modal.style.display =
+            "none";
+    }
+
+};
+
+</script>
+
+</body>
+</html>
