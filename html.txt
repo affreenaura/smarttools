@@ -1607,8 +1607,8 @@ body.dark .cta-box {
 <footer>
 
     <div class="logo">
-        AI<span>Hub</span>
-    </div>
+         Affreen
+</div>
 
     <p>
         © 2026 AIHub. Discover. Create. Automate.
